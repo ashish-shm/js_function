@@ -24,7 +24,17 @@
   * [ ] Convert it to celsius and output "NN°F is NN°C."
 
 ```js
-// your code goes here
+
+function celsiustoFahrenheit(celtemp){
+  var celtemp = celtemp;
+  alert(` ${celtemp}°C is ${celtemp + 32}°F `);
+}
+
+function fahrenheittoCelsius(fahtemp){
+  var fahtemp = fahtemp;
+  alert(` ${fahtemp}°F is ${fahtemp - 32}°C `);
+}
+
 ```
 4. 🎖The function below returns true if the parameter age is greater than 18. Otherwise it asks for a confirmation and returns its result:
 
@@ -40,7 +50,7 @@ function checkAge(age) {
 ```
   4.1 🎖Convert the above function using ternary operator.
   ```js
-  // your code goes here
+  function checkAge(age) = (age > 18) ? return true : return confirm("Did parents allow you?");
   ```
 
   4.2 🎖Convert the above function using `||` operator.
@@ -67,6 +77,28 @@ Is there any difference in the behavior of these two variants? If there is what 
   * [ ] In this task the function should support only natural values of n: integers greater then 1.
 
 ```js
+function pow(x,n){
+  // var x = Number(prompt("Enter the natural number greater than 1"));
+  // var n = Number(prompt("Enter the power value"));
+  var x = x;
+  var n = n;
+
+  if(x < 1){
+    alert(` Number below 1 is not allowed `);
+  }
+  
+  for(var i=1 ; i <n ; i++){
+    x = x * x;
+  }
+
+  alert(` Result is ${x} `);
+
+}
+
+pow(3,2);
+
+
+
 // Your code goes here
 
 // After writing code uncomment to check the answer.
@@ -79,16 +111,67 @@ Is there any difference in the behavior of these two variants? If there is what 
 
 ```js
 // your code goes here
+function sumorproduct( n ){
+  var n = Number(prompt("Enter the number "));
+  var x = prompt("Sum or Product" );
+  var sum= 0;
+  var mul = 1;
+  var i = 1;
+  switch(true){
+    case (sum) :
+    while(i <= n){
+      sum = sum +i;
+    }
+    alert(`Sum is ${sum} `);
+    break;
+
+    case(mul) :
+    while(i <= n){
+      mul = mul * i;
+    }
+    alert(` Product is ${mul} `);
+    break;
+
+    default :
+    alert(`Choose betwewn sum and product`);
+  
+  }
+}
+
 ```
 6. 🎖Write a program that asks the user for a number n using prompt and prints the sum of the numbers 1 to n
 
 ```js
 // your code goes here
+function sum( n ){
+  var n = Number(prompt("Enter the value n"));
+  var i,sum = 0;
+  while( i <= n){
+    sum = sum + i;
+    i++;
+  }
+
+  alert(`Sum of the numbers is ${sum} `);
+}
+
 ```
 7. 🎖Modify the previous program such that only multiples of 5 or 7 are considered in the sum, e.g. n = 20 (5,7,10,14,15,20) 71
 
 ```js
 // your code goes here
+function sum( n ){
+  var n = Number(prompt("Enter the value n"));
+  var i,sum = 0;
+  while( i <= n){
+    if( i%5 == 0 || i%7 ==0){
+    sum = sum + i;
+    }
+    i++;
+  }
+
+  alert(`Sum of the numbers is ${sum} `);
+}
+
 ```
 
 8. 🎖Write a function `min` that takes two arguments and returns their minimum.
@@ -96,8 +179,24 @@ Is there any difference in the behavior of these two variants? If there is what 
 ```js
 // Your code here.
 
-console.log(min(0, 10));
-// → 0
-console.log(min(0, -10));
-// → -10
+  function min(x , y){
+    var x = x;
+    var y = y;
+
+    if (x > y){
+      alert(y);
+    }
+    else if(x == y){
+      alert("both are equal");
+    }
+    else{
+      alert(x);
+    }
+  }
+
+
+  console.log(min(0, 10));
+  // → 0
+  console.log(min(0, -10));
+  // → -10
 ```
