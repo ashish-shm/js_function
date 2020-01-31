@@ -6,6 +6,9 @@
 
 ```js
 // your code goes here
+let calculateDogAge = (age, conversionRate) => return(age * conversionRate);
+  alert(` Your dog is  ${calculateDogAge(5, 7)} years old in dog years! ` );
+
 ```
 2. 🎖Write a function named calculateSupply that:
   * [ ] takes 2 arguments: age, amount per day.
@@ -15,6 +18,12 @@
 
 ```js
 // your code goes here
+const MAX_AGE = 75;
+
+  let calculateSupply = (age, amountPerDay) => return((MAX_AGE - age) * (amountPerDay * 365));
+  alert(` You will need ${Math.round( calculateSupply(21, 3) )} to 
+    last you until the ripe old age of ${MAX_AGE} `);
+
 ```
 3. 🎖Create a function called celsiusToFahrenheit:
   * [ ] Store a celsius temperature into a variable.
@@ -56,6 +65,14 @@ function checkAge(age) {
   4.2 🎖Convert the above function using `||` operator.
   ```js
   // your code goes here
+function checkAge(age){
+  if(age > 18 || age <=18){
+  return true;
+  return confirm("Did parents allow you?");
+}
+  
+}
+
   ```
 Will the function work differently if else is removed like below?
 
@@ -69,6 +86,8 @@ function checkAge(age) {
 }
 ```
 Is there any difference in the behavior of these two variants? If there is what is that?
+
+Yes, there is difference. In the previous one, there would be two cases. If age is > 18 then it returns true or else it confirms if parents allow you? In this case, if age > 18 it returns true and then it confirms if parents allow you?
 
 
 5. 🎖 Write a function pow(x,n) that returns x in power n.
